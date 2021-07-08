@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class *inserir o endereço do arquivo* {
+
+	public static void main(String[] args) {
+		
+	//Variavel de tipo Scanner obtendo a qtde de produtos!
+		Scanner scan = new Scanner(System.in);
+		
+	//Pede para digitar a qtde!
+		System.out.println("Informe a quantidade de produtos");
+		System.out.println("");
+		
+	//Variavel de tipo int recebendo a qtde de produtos!
+		int qtdeProdutos = scan.nextInt();
+		System.out.println("");
+		
+	//Utilizando if/else para realizar as verificações!
+		if (qtdeProdutos >= 500) {
+			 System.out.println("Qtde suficiente!");
+		} else if (qtdeProdutos < 500 && qtdeProdutos > 1) {
+			 System.out.println("Repor produto! ");
+		}
+		
+	      System.out.println("");
+	      
+	 //Utilizando o operador ternário para realizar as verificações!
+	      System.out.println(
+	    	(qtdeProdutos>= 500)? "Qtde suficiente!" : "Repor produto!");
+	      scan.close();
+				
+	}
+ }
