@@ -1,0 +1,33 @@
+import java.util.*;
+import java.text.*;
+
+public class calculadora {
+
+	public static void main(String[] args) throws ParseException {
+		
+		//Variavel de tipo String recebendo as horas!
+		//Lembrando que aqui as horas estão 'chumbadas' ao código
+		//mas elas podem ser obtidas de outras fontes!
+		String horaInicial = "08:00";
+		String horaFinal = "17:00";
+		
+		  // Variavéis de tipo SilmpleDataFormat para formatação das horas
+		// e para setarmos o fuso horário!
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		
+		//Variavel de tipo Date obtendo as hroas String formatadas!	
+		Date dtHoraInicial = sdf.parse(horaInicial);
+		Date dtHoraFinal = sdf.parse(horaFinal);
+		
+		//Variavel de tipo long obtendo a diferença das horas em milissegundos!
+		long diferencaHoras = dtHoraFinal.getTime() - dtHoraInicial.getTime();
+		
+		//Variavel do tipo Date para calcularmos a diferença em milisegundos!
+		Date dtDiferencaHoras = new Date(diferencaHoras);
+		
+		//Apresentamos o resultado!
+		System.out.println("A diferença é de " + sdf.format(dtDiferencaHoras));
+		
+	}
+}
